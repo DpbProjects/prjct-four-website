@@ -3,8 +3,9 @@ import Link from "next/link";
 export default function Page() {
   return (
     <main>
-      <h1>Contact</h1>
-      <Link href="/">back to homepage</Link>
+      <div className="py-9 text-center">
+        <h1 className=" text-3xl font-bold text-center">Contact</h1>
+      </div>
     </main>
   );
 }

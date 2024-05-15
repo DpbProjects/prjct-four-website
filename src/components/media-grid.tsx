@@ -44,9 +44,11 @@ export default async function MediaGrid() {
       <h1 className=" text-2xl font-bold text-center mb-6">Projects</h1>
 
       {/* One */}
+
       <video width={"100%"} autoPlay loop muted className=" py-3">
-        <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4" />
+        <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" />
       </video>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {imageUrls.map((photo, i) => {
           return (
@@ -58,8 +60,9 @@ export default async function MediaGrid() {
       </div>
 
       {/* Two */}
+
       <video width={"100%"} autoPlay loop muted className=" py-3">
-        <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" />
+        <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4" />
       </video>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
