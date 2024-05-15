@@ -41,8 +41,6 @@ export default async function MediaGrid() {
 
   return (
     <section className="py-16 w-full m-auto px-3">
-      <h1 className=" text-2xl font-bold text-center mb-6">Projects</h1>
-
       {/* One */}
 
       <video width={"100%"} autoPlay loop muted className=" py-3">
