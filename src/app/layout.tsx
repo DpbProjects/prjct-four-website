@@ -18,9 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Header />
-        {children}
+      <body className={`${inter.className}`}>
+        <div className="flex flex-col justify-between  h-screen">
+          <Header />
+          {children}
+          <Header />
+        </div>
       </body>
     </html>
   );

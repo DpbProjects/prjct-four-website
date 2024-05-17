@@ -1,31 +1,40 @@
-import Image from "next/image";
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const path = usePathname();
+
   return (
-    <header className="bg-white text-white py-4">
-      <div className=" mx-auto flex flex-col justify-between items-center">
-        <Image
-          src="https://scontent.cdninstagram.com/v/t51.2885-19/378671285_744613437429644_3338336800182949203_n.jpg?_nc_ht=scontent.cdninstagram.com&_nc_cat=108&_nc_ohc=S4HLvqyrwGsQ7kNvgH68gUG&edm=APs17CUBAAAA&ccb=7-5&oh=00_AYCgbbe0IoKv4_NzdibfA0-Gelax_ASzboVIT6TCwteM5Q&oe=6649C1B9&_nc_sid=10d13b"
-          alt=""
-          width={300}
-          height={300}
-        />
-        <nav>
-          <ul className="flex space-x-4">
+    <header className="py-4 px-4 w-full">
+      <nav>
+        <ul className="flex justify-between items-center space-x-4">
+          <li>
+            <Link
+              href="/contact"
+              className="hover:text-gray-300 text-black font-medium"
+            >
+              WHO WE ARE
+            </Link>
+          </li>
+          {path !== "/" ? (
             <li>
               <Link href="/" className="hover:text-gray-300 text-black">
                 Home
               </Link>
             </li>
-            <li>
-              <Link href="/contact" className="hover:text-gray-300 text-black">
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
+          ) : null}
+          <li>
+            <Link
+              href="/projects"
+              className="hover:text-gray-300 text-black font-medium"
+            >
+              PROJECTS
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 }

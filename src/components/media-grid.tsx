@@ -1,8 +1,8 @@
+"use client";
+
 import Image from "next/image";
 
-import { client } from "@/lib/pexels";
-
-export default async function MediaGrid() {
+export default function MediaGrid() {
   const imageUrls = [
     "https://source.unsplash.com/random/500x500",
     "https://source.unsplash.com/random/600x600",
@@ -51,7 +51,16 @@ export default async function MediaGrid() {
         {imageUrls.map((photo, i) => {
           return (
             <div key={i}>
-              <Image src={photo} alt="" width={600} height={600} />
+              <Image
+                src={photo}
+                alt=""
+                width={600}
+                height={600}
+                className=" transition-opacity opacity-0 duration-[2s]"
+                onLoadingComplete={(image) =>
+                  image.classList.remove("opacity-0")
+                }
+              />
             </div>
           );
         })}
@@ -67,7 +76,16 @@ export default async function MediaGrid() {
         {imageUrlsTwo.map((photo, i) => {
           return (
             <div key={i}>
-              <Image src={photo} alt="" width={600} height={600} />
+              <Image
+                src={photo}
+                alt=""
+                width={600}
+                height={600}
+                className=" transition-opacity opacity-0 duration-[2s]"
+                onLoadingComplete={(image) =>
+                  image.classList.remove("opacity-0")
+                }
+              />
             </div>
           );
         })}
